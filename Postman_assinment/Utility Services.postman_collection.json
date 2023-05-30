@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "c70e3f44-f22d-48d8-8b9f-de848c2cfadc",
+		"name": "Utility Services",
+		"description": "API to create and initialize a connected vehicle for testing purposes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27141178",
+		"_collection_link": "https://gold-firefly-885888.postman.co/workspace/My-Postman-Flows-Demo~c2ec7941-a0b9-471b-a1f6-9e5252041378/collection/27141178-c70e3f44-f22d-48d8-8b9f-de848c2cfadc?action=share&creator=27141178&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Create vehicle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"running\": true,\n    \"temperature\": \"hot\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/vehicles",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"vehicles"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "key",
+				"value": "X-API-Key",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "{{apiKey}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
